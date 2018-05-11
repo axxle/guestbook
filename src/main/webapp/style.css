@@ -1,0 +1,41 @@
+#pagetitle {
+    text-align: center;
+}
+#submitarea {
+    text-align: center;
+}
+
+.main {}
+
+.container {
+    width: 100%;
+    max-width: 1024px; /*максимальная ширина*/
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.allFeedback {}
+
+.feedback {
+    text-align: justify;
+}
+.wide {
+    overflow: hidden;
+}
+.name-input {
+    border: 1px solid #dadada;
+    display: block;
+    height: 20px;
+    width: 100%;
+}
+
+.comment-area {
+    border: 1px solid #dadada;
+    display: block;
+    height: 120px;
+    width: 100%;
+}
+
+.bttn {
+    height: 25px;
+}
