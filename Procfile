@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar server/webapp-runner-8.5.39.0.jar --enable-naming --port $PORT build/libs/guestbook.war
+web: java -jar build/server/webapp-runner-*.jar build/libs/*.war
