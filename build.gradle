@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+tasks.withType(Javadoc) { options.encoding = 'UTF-8' }
+
+dependencies {
+	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.3.9.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.9.RELEASE'
+	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.9.RELEASE'
+	compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1102-jdbc41'
+	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0.1'
+	testCompile("junit:junit")
+	compile 'com.github.jsimone:webapp-runner:8.5.11.3'
+}
+
+task stage() {
+    dependsOn clean, war
+}
+
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)

@@ -1,9 +1,11 @@
 # IDE folders and files
 .idea/
 *.iml
+.gradle/
 
 # Building folders
 target/
+build/
 
 # Compiled class file
 *.class
