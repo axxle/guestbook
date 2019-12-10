@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -cp webapp-runner.jar:libs/* webapp.runner.launch.Main --enable-naming --port $PORT build/libs/*.war
+web:    java $JAVA_OPTS -jar build/libs/webapp-runner*.jar --enable-naming --port $PORT build/libs/*.war
