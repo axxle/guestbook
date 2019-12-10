@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar build/server/webapp-runner-*.jar --port $PORT build/libs/guestbook.war
+web: java $JAVA_OPTS -jar webapp-runner-8.5.11.3.jar --port $PORT build/libs/guestbook.war
