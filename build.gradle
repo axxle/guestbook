@@ -24,7 +24,7 @@ dependencies {
 	compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1102-jdbc41'
 	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0.1'
 	testCompile("junit:junit")
-	compile 'com.github.jsimone:webapp-runner:8.5.11.3'
+	compile 'com.github.jsimone:webapp-runner:8.5.39.0'
 }
 
 task stage() {
